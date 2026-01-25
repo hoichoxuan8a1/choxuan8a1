@@ -506,23 +506,53 @@ total_hours_wasted_here = 363.6
             z-index: 2;
         }
 
-        .banner h1 {
+               .banner h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-            color: var(--gold);
+            text-shadow: 
+                0 0 10px rgba(255, 215, 0, 0.8),
+                0 0 20px rgba(255, 152, 0, 0.6),
+                0 0 30px rgba(229, 57, 53, 0.4),
+                3px 3px 6px rgba(0, 0, 0, 0.5);
+            color: #FFD700;
             line-height: 1.2;
-            background: linear-gradient(45deg, var(--gold), var(--orange));
+            background: linear-gradient(45deg, 
+                #FFD700 0%, 
+                #FF9800 25%, 
+                #FF5722 50%, 
+                #FF9800 75%, 
+                #FFD700 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: glow 3s infinite alternate;
+            background-size: 200% auto;
+            animation: gradient-shift 4s ease infinite, glow 3s infinite alternate;
         }
-
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+        
         @keyframes glow {
-            0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
-            100% { filter: drop-shadow(0 0 15px rgba(255, 152, 0, 0.7)); }
+            0% { 
+                filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+                text-shadow: 
+                    0 0 10px rgba(255, 215, 0, 0.8),
+                    0 0 20px rgba(255, 152, 0, 0.6),
+                    0 0 30px rgba(229, 57, 53, 0.4),
+                    3px 3px 6px rgba(0, 0, 0, 0.5);
+            }
+            100% { 
+                filter: drop-shadow(0 0 15px rgba(255, 152, 0, 0.7));
+                text-shadow: 
+                    0 0 15px rgba(255, 215, 0, 0.9),
+                    0 0 25px rgba(255, 152, 0, 0.7),
+                    0 0 35px rgba(229, 57, 53, 0.5),
+                    3px 3px 6px rgba(0, 0, 0, 0.5);
+            }
         }
 
         .year-2026 {
