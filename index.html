@@ -18,18 +18,15 @@ total_hours_wasted_here = 366.7
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gian Hàng Chợ Xuân 8A1 - Xuân Bính Ngọ 2026</title>
     
-    <!-- Tối ưu bảo mật để tránh Google quét nhầm -->
     <meta name="robots" content="index, follow">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="security" content="strict-transport-security">
     <meta name="description" content="Gian hàng Chợ Xuân 8A1 với ẩm thực truyền thống, hoạt động thiện nguyện và trải nghiệm Tết Bính Ngọ 2026 đầy ý nghĩa">
     
-    <!-- Font chữ phù hợp chủ đề Tết -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&family=Montserrat:wght@400;700;800&family=Dancing+Script:wght@700&family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@700&family=Merriweather:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome cho biểu tượng -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -80,7 +77,7 @@ total_hours_wasted_here = 366.7
             background: 
                 /* Lớp gradient chính */
                 linear-gradient(135deg, rgba(229, 57, 53, 0.03) 0%, rgba(255, 152, 0, 0.03) 100%),
-                /* Hoa văn Tết nhẹ */
+                /* Hoa văn Tết */
                 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><defs><pattern id="pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M20,20 L60,20 L60,60 L20,60 Z" fill="none" stroke="%23E53935" stroke-width="1" stroke-opacity="0.05"/><circle cx="40" cy="40" r="15" fill="%23FFD700" fill-opacity="0.03"/><path d="M40,20 L40,60 M20,40 L60,40" stroke="%23FF9800" stroke-width="1" stroke-opacity="0.05"/></pattern></defs><rect width="100%25" height="100%25" fill="url(%23pattern)"/></svg>'),
                 /* Hình ảnh hoa đào/hoa mai mờ */
                 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><g fill="%23E53935" fill-opacity="0.03"><path d="M100,50 C120,30 160,40 170,70 C180,100 150,130 120,140 C90,150 60,130 50,100 C40,70 80,70 100,50 Z"/><path d="M80,120 C70,110 60,90 70,70 C80,50 100,40 120,50 C140,60 150,80 140,100 C130,120 110,130 90,120 Z"/></g></svg>'),
@@ -249,7 +246,7 @@ total_hours_wasted_here = 366.7
             }
         }
 
-        /* Animation lồng đèn nhỏ và tinh tế */
+        /* Animation lồng đèn */
         .lantern-container {
             position: fixed;
             top: 0;
@@ -350,7 +347,7 @@ total_hours_wasted_here = 366.7
             50% { opacity: 0.9; transform: translateX(-50%) scale(1.05); }
         }
 
-        /* Header và Navigation phong cách Canva */
+        /* Header và Navigation */
         header {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 50%, var(--deep-red) 100%);
             color: var(--white);
@@ -786,7 +783,7 @@ total_hours_wasted_here = 366.7
             transform: translateX(0);
         }
 
-        /* Nút pháo hoa được tối ưu */
+        /* Nút pháo hoa */
         .fireworks-btn {
             position: fixed;
             bottom: 30px;
@@ -813,7 +810,7 @@ total_hours_wasted_here = 366.7
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Canvas cho pháo hoa - sửa để không che khuất */
+        /* Canvas cho pháo hoa */
         #fireworks-canvas {
             position: fixed;
             top: 0;
@@ -824,7 +821,7 @@ total_hours_wasted_here = 366.7
             z-index: 50;
         }
 
-        /* Section chung phong cách Canva */
+        /* Section chung */
         section {
             padding: 5rem 2rem;
             max-width: 1400px;
@@ -1054,7 +1051,7 @@ total_hours_wasted_here = 366.7
             gap: 10px;
         }
 
-        /* Footer phong cách Canva */
+        /* Footer */
         footer {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 50%, var(--deep-red) 100%);
             color: var(--white);
@@ -1347,7 +1344,7 @@ total_hours_wasted_here = 366.7
     </style>
 </head>
 <body>
-    <!-- Background Tết phong cách Canva -->
+    <!-- Background Tết -->
     <div class="tet-background"></div>
     
     <!-- Họa tiết trang trí góc -->
@@ -1356,10 +1353,10 @@ total_hours_wasted_here = 366.7
     <div class="tet-corner-decoration corner-3"></div>
     <div class="tet-corner-decoration corner-4"></div>
     
-    <!-- Hoa mai/đào rơi nhỏ và tinh tế -->
+    <!-- Hoa mai/đào rơi -->
     <div class="falling-container" id="falling-container"></div>
     
-    <!-- Lồng đèn nhỏ -->
+    <!-- Lồng đèn -->
     <div class="lantern-container">
         <div class="lantern lantern-1">
             <div class="lantern-body"></div>
@@ -1375,7 +1372,7 @@ total_hours_wasted_here = 366.7
         </div>
     </div>
     
-    <!-- Canvas cho pháo hoa tối ưu -->
+    <!-- Canvas cho pháo hoa -->
     <canvas id="fireworks-canvas"></canvas>
     
     <!-- Hộp nhạc Tết -->
@@ -1389,8 +1386,8 @@ total_hours_wasted_here = 366.7
             <li class="song-item" data-song="audio1">Ước Nguyện Đầu Xuân</li>
             <li class="song-item" data-song="audio2">Một Năm Mới Bình An</li>
             <li class="song-item" data-song="audio3">Tết Bình An</li>
-            <li class="song-item" data-song="audio4">Tết Sum Vầy</li>
-            <li class="song-item" data-song="audio5">Xuân Họp Mặt</li>
+            <li class="song-item" data-song="audio4">Tết Đong Đầy</li>
+            <li class="song-item" data-song="audio5">Nụ Cười Xuân</li>
         </ul>
         
         <div class="music-controls">
@@ -1412,7 +1409,7 @@ total_hours_wasted_here = 366.7
         </a>
     </div>
     
-    <!-- Nút bắn pháo hoa tối ưu -->
+    <!-- Nút bắn pháo hoa -->
     <button class="fireworks-btn" id="fireworks-btn">
         <i class="fas fa-fire"></i>
     </button>
@@ -1569,7 +1566,7 @@ total_hours_wasted_here = 366.7
         </div>
         
         <div class="menu-grid" id="menu-grid">
-            <!-- Các card món ăn sẽ được thêm bằng JavaScript -->
+            <!-- Các card món ăn (JavaScript) -->
         </div>
     </section>
     
@@ -1692,7 +1689,7 @@ total_hours_wasted_here = 366.7
     </div>
 
     <script>
-        // Tạo hoa rơi nhỏ và tinh tế
+        // Tạo hoa rơi 
         function createFallingFlowers() {
             const container = document.getElementById('falling-container');
             const flowerTypes = ['flower-peach', 'flower-apricot', 'flower-bloom', 'flower-gold'];
@@ -1737,7 +1734,7 @@ total_hours_wasted_here = 366.7
         
         // Đếm ngược Tết
         function updateCountdown() {
-            // Ngày Tết Bính Ngọ 2026: 17/2/2026 (dương lịch)
+           
             const tetDate = new Date('February 17, 2026 00:00:00 GMT+07:00');
             const now = new Date();
             const diff = tetDate - now;
@@ -1765,7 +1762,7 @@ total_hours_wasted_here = 366.7
         setInterval(updateCountdown, 1000);
         updateCountdown(); // Chạy ngay lần đầu
         
-        // Hộp nhạc Tết - SỬA: Thêm audio thực tế
+        // Hộp nhạc Tết 
         const musicBox = document.getElementById('music-box');
         const musicPanel = document.getElementById('music-panel');
         const songItems = document.querySelectorAll('.song-item');
@@ -1777,7 +1774,7 @@ total_hours_wasted_here = 366.7
         let currentSong = null;
         let isMusicPlaying = false;
         
-        // Danh sách nhạc Tết (thay bằng URL thực tế nếu có)
+        // Danh sách nhạc Tết 
         const tetSongs = {
     audio1: './audio/audio1.mp3',
     audio2: './audio/audio2.mp3',
@@ -2208,7 +2205,7 @@ total_hours_wasted_here = 366.7
             }
         }
         
-        // PHÁO HOA CẢI TIẾN - SỬA LỖI
+        // PHÁO HOA 
         const canvas = document.getElementById('fireworks-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -2224,11 +2221,11 @@ total_hours_wasted_here = 366.7
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
         
-        // Âm thanh pháo hoa - SỬA: Sử dụng file âm thanh thực
+        // Âm thanh pháo hoa 
         const fireworkSounds = [
-            'https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-with-scream-3098.mp3', // Thay bằng fire1.mp3 thực
-            'https://assets.mixkit.co/sfx/preview/mixkit-fireworks-show-explosion-3099.mp3', // Thay bằng fire2.mp3 thực
-            'https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-3100.mp3'  // Thay bằng fire3.mp3 thực
+            'https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-with-scream-3098.mp3', 
+            'https://assets.mixkit.co/sfx/preview/mixkit-fireworks-show-explosion-3099.mp3', 
+            'https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-3100.mp3'  
         ];
         
         // Phát âm thanh pháo hoa
@@ -2239,16 +2236,16 @@ total_hours_wasted_here = 366.7
             audio.play().catch(e => console.log("Không thể phát âm thanh pháo hoa: ", e));
         }
         
-        // Lớp Particle cho pháo hoa - CẢI TIẾN ĐỂ ĐẸP HƠN
+        // Lớp Particle cho pháo hoa 
         class FireworkParticle {
             constructor(x, y, color) {
                 this.x = x;
                 this.y = y;
                 this.color = color;
-                this.size = Math.random() * 4 + 2; // Kích thước lớn hơn
+                this.size = Math.random() * 4 + 2; // Kích thước lớn 
                 this.speedX = Math.random() * 6 - 3;
                 this.speedY = Math.random() * 6 - 3;
-                this.life = 50; // Vòng đời dài hơn
+                this.life = 50; // Vòng đời dài 
                 this.gravity = 0.05;
                 this.fadeSpeed = 0.03;
                 this.originalSize = this.size;
@@ -2344,7 +2341,7 @@ total_hours_wasted_here = 366.7
             }
         }
         
-        // Xử lý nút pháo hoa - SỬA: Có thể bấm liên tục
+        // Xử lý nút pháo hoa 
         const fireworksBtn = document.getElementById('fireworks-btn');
         
         fireworksBtn.addEventListener('click', () => {
@@ -2361,7 +2358,7 @@ total_hours_wasted_here = 366.7
             }
         });
         
-        // Cho phép bấm liên tục bằng cách thêm sự kiện click nhanh
+        // Cho phép bấm liên tục 
         let lastClickTime = 0;
         fireworksBtn.addEventListener('click', (e) => {
             const currentTime = new Date().getTime();
