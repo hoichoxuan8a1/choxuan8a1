@@ -2501,6 +2501,68 @@ total_hours_wasted_here = 366.7
                 }
             });
         });
+        // Xử lý nút bài thuyết trình
+const presentationBtn = document.getElementById('presentation-btn');
+
+presentationBtn.addEventListener('click', () => {
+    // Thêm hiệu ứng loading
+    const originalText = presentationBtn.innerHTML;
+    presentationBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang mở...';
+    presentationBtn.disabled = true;
+    
+    // Tạo hiệu ứng pháo hoa nhỏ
+    createMiniFireworks();
+    
+    // Mở Google Slides sau 1 giây (để hiển thị hiệu ứng)
+    setTimeout(() => {
+        // THAY THẾ URL DƯỚI ĐÂY BẰNG LINK GOOGLE SLIDES THỰC TẾ
+        const slidesUrl = 'https://docs.google.com/presentation/d/YOUR_SLIDE_ID/edit';
+        window.open(slidesUrl, '_blank');
+        
+        // Khôi phục nút sau 0.5 giây
+        setTimeout(() => {
+            presentationBtn.innerHTML = originalText;
+            presentationBtn.disabled = false;
+        }, 500);
+    }, 1000);
+});
+
+// Hàm tạo pháo hoa mini (nếu chưa có)
+function createMiniFireworks() {
+    const colors = ['#FFD700', '#FF6B6B', '#FFA500'];
+    
+    for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 6px;
+                height: 6px;
+                background-color: ${colors[Math.floor(Math.random() * colors.length)]};
+                border-radius: 50%;
+                left: ${40 + Math.random() * 30}%;
+                top: ${40 + Math.random() * 30}%;
+                z-index: 1000;
+                pointer-events: none;
+                box-shadow: 0 0 8px currentColor;
+            `;
+            
+            document.body.appendChild(particle);
+            
+            // Animation pháo hoa nổ
+            const explosion = particle.animate([
+                { transform: 'scale(1)', opacity: 1 },
+                { transform: 'scale(0)', opacity: 1, offset: 0.1 },
+                { transform: 'scale(6)', opacity: 0 }
+            ], {
+                duration: 1000,
+                easing: 'ease-out'
+            });
+            
+            explosion.onfinish = () => particle.remove();
+        }, i * 150);
+    }
+}
     </script>
 </body>
 </html>
