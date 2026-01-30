@@ -1341,6 +1341,129 @@ total_hours_wasted_here = 366.7
             pointer-events: none;
             z-index: 51;
         }
+        .tet-presentation-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 16px 28px;
+    background: linear-gradient(135deg, #C62828 0%, #B71C1C 100%);
+    color: #FFEB3B;
+    border: 3px solid #FFD54F;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(198, 40, 40, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng ánh vàng lấp lánh */
+.tet-presentation-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+    transition: left 0.7s;
+}
+
+/* Hiệu ứng khi hover */
+.tet-presentation-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(198, 40, 40, 0.6);
+    background: linear-gradient(135deg, #D32F2F 0%, #C62828 100%);
+}
+
+.tet-presentation-btn:hover::before {
+    left: 100%;
+}
+
+/* Icon Tết */
+.tet-icon {
+    font-size: 24px;
+    margin-right: 12px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hiệu ứng nổi */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Hiệu ứng pháo nổ */
+.tet-presentation-btn::after {
+    content: '🎆';
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.tet-presentation-btn:hover::after {
+    animation: firework 0.8s forwards;
+}
+
+@keyframes firework {
+    0% { 
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-20px, -20px) scale(1.5);
+    }
+    50% {
+        transform: translate(20px, -30px) scale(2);
+    }
+    75% {
+        transform: translate(-10px, -40px) scale(2.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -50px) scale(3);
+    }
+}
+
+/* Hiệu ứng loading khi click */
+.loading {
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%) !important;
+    pointer-events: none;
+}
+
+.loading span {
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: 'Đang tải.'; }
+    40% { content: 'Đang tải..'; }
+    60%, 100% { content: 'Đang tải...'; }
+}
+
+/* Nút cho điện thoại */
+@media (max-width: 768px) {
+    .tet-presentation-btn {
+        top: 10px;
+        right: 10px;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    .tet-icon {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+}
     </style>
 </head>
 <body>
@@ -2453,6 +2576,54 @@ total_hours_wasted_here = 366.7
                 }
             });
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    const button = document.createElement('a');
+    button.href = '#';
+    button.className = 'tet-presentation-btn';
+    button.innerHTML = `
+        <span class="tet-icon">🧧</span>
+        <span class="btn-text">Xem Slide Tết</span>
+    `;
+    
+    // Thêm sự kiện click
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Thêm hiệu ứng loading
+        const btnText = this.querySelector('.btn-text');
+        const originalText = btnText.textContent;
+        btnText.textContent = 'Đang tải...';
+        this.classList.add('loading');
+        
+        // Chuyển hướng sau 1.5 giây (để hiển thị hiệu ứng)
+        setTimeout(() => {
+            // THAY THẾ URL DƯỚI ĐÂY BẰNG LINK GOOGLE SLIDES CỦA BẠN
+            window.open('https://docs.google.com/presentation/d/your-slide-id/edit', '_blank');
+            
+            // Khôi phục trạng thái nút
+            setTimeout(() => {
+                btnText.textContent = originalText;
+                this.classList.remove('loading');
+            }, 500);
+        }, 1500);
+    });
+    
+    // Thêm nút vào trang web
+    document.body.appendChild(button);
+    
+    // Hiệu ứng xuất hiện ban đầu
+    setTimeout(() => {
+        button.style.opacity = '0';
+        button.style.transform = 'translateY(-20px)';
+        button.style.display = 'inline-flex';
+        
+        setTimeout(() => {
+            button.style.transition = 'opacity 0.5s, transform 0.5s';
+            button.style.opacity = '1';
+            button.style.transform = 'translateY(0)';
+        }, 100);
+    }, 500);
+});
     </script>
 </body>
 </html>
