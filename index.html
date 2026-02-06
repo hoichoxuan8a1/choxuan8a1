@@ -1607,11 +1607,8 @@ total_hours_wasted_here = 366.7
         
         <div style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
             <button class="filter-btn active" data-filter="all" style="padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); border: 2px solid var(--primary-red); color: var(--primary-red); border-radius: 50px; cursor: pointer; font-weight: 600; transition: var(--transition);">Tất cả</button>
-            <button class="filter-btn" data-filter="xoi_ngot" style="padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); border: 2px solid var(--primary-red); color: var(--primary-red); border-radius: 50px; cursor: pointer; font-weight: 600; transition: var(--transition);">Xôi ngọt</button>
             <button class="filter-btn" data-filter="xoi_man" style="padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); border: 2px solid var(--primary-red); color: var(--primary-red); border-radius: 50px; cursor: pointer; font-weight: 600; transition: var(--transition);">Xôi mặn</button>
             <button class="filter-btn" data-filter="banh" style="padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); border: 2px solid var(--primary-red); color: var(--primary-red); border-radius: 50px; cursor: pointer; font-weight: 600; transition: var(--transition);">Bánh</button>
-            <button class="filter-btn" data-filter="tra" style="padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); border: 2px solid var(--primary-red); color: var(--primary-red); border-radius: 50px; cursor: pointer; font-weight: 600; transition: var(--transition);">Rau câu</button>
-        </div>
         
         <div class="menu-grid" id="menu-grid">
             <!-- Các card món ăn (JavaScript) -->
@@ -1898,21 +1895,9 @@ total_hours_wasted_here = 366.7
         
         // Dữ liệu món ăn
         const foodItems = [
+           
             {
                 id: 1,
-                name: "Xôi Lá Cẩm Ngọt",
-                category: "xoi_ngot",
-                price: "5.000 VNĐ",
-                image: "https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/164738/Originals/la-cam-nau-xoi-1.jpg",
-                description: "Xôi lá cẩm mặn dẻo thơm, có màu tím tự nhiên đẹp mắt từ lá cẩm, ăn kèm với các loại đồ mặn truyền thống. Xôi có vị béo nhẹ từ nước cốt dừa, thơm mùi lá cẩm, tạo nên hương vị đậm đà, hấp dẫn.",
-                ingredients: "Gạo nếp thơm, lá cẩm tươi, nước cốt dừa, muối, chà bông, thịt, lạp xưởng, trứng muối, hành phi",
-                preparation: "Lá cẩm rửa sạch, đun lấy nước màu tím đậm. Gạo nếp ngâm với nước lá cẩm qua đêm để thấm màu. Đồ xôi chín, khi xôi gần được trộn đều với một ít đường và nước cốt dừa cho thơm bóng. Khi ăn rắc thêm dừa nạo và vừng rang.",
-                meaning: "Màu tím của xôi lá cẩm tượng trưng cho sự thủy chung, sang trọng và bền vững. Đây là món xôi ngọt truyền thống, thường được dùng trong các dịp lễ, Tết hay làm quà sáng đậm chất Việt.",
-                rating: 5,
-                badge: "Bán chạy"
-            },
-            {
-                id: 2,
                 name: "Xôi Lá Cẩm Mặn",
                 category: "xoi_man",
                 price: "15.000 VNĐ",
@@ -1925,9 +1910,9 @@ total_hours_wasted_here = 366.7
                 badge: "Đặc biệt"
             },
             {
-                id: 3,
-                name: "Xôi Bắp Ngọt",
-                category: "xoi_ngot",
+                id: 2,
+                name: "Xôi Bắp",
+                category: "xoi_man",
                 price: "5.000 VNĐ",
                 image: "https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476149uZk/anh-mo-ta.png",
                 description: "Xôi bắp ngọt với hạt ngô tươi bóng mẩy, dẻo thơm cùng vị ngọt tự nhiên. Món xôi có màu vàng tươi sáng, hương thơm đặc trưng của ngô non, mang đến cảm giác ấm bụng và gần gũi.",
@@ -1938,9 +1923,9 @@ total_hours_wasted_here = 366.7
                 badge: "Truyền thống"
             },
             {
-                id: 4,
+                id: 3,
                 name: "Xôi Khoai Môn Ngọt",
-                category: "xoi_ngot",
+                category: "xoi_man",
                 price: "5.000 VNĐ",
                 image: "https://cdn.tgdd.vn/2021/01/CookProduct/BeFunky-collage-2021-01-20T103818.301-1200x676-1200x662.jpg",
                 description: "Xôi khoai môn ngọt dẻo mềm, có màu tím nhạt tự nhiên đẹp mắt và hương thơm đặc trưng của khoai môn. Xôi có vị ngọt thanh, bùi béo, kết hợp với độ dẻo của nếp và vị bột của khoai, tạo nên một món ăn vừa quen thuộc vừa hấp dẫn.",
@@ -1951,9 +1936,9 @@ total_hours_wasted_here = 366.7
                 badge: "Đậm đà"
             },
             {
-                id: 5,
+                id: 4,
                 name: "Xôi lá dứa",
-                category: "xoi_ngot",
+                category: "xoi_man",
                 price: "5.000 VNĐ",
                 image: "https://daotaobeptruong.vn/wp-content/uploads/2019/07/mon_xoi_la_dua_thom_ngon_vua_dep_mat.jpg",
                 description: "Xôi lá dứa dẻo thơm, nổi bật với màu xanh ngọc tự nhiên và hương thơm ngọt ngào, thanh mát đặc trưng của lá dứa (lá nếp). Xôi có vị ngọt dịu, béo nhẹ từ nước cốt dừa, tạo nên một món ăn hấp dẫn cả về màu sắc lẫn hương vị.",
@@ -1963,44 +1948,6 @@ total_hours_wasted_here = 366.7
                 rating: 5,
                 badge: "Thơm ngon"
             },
-            {
-                id: 6,
-                name: "Bánh Ú Lá",
-                category: "banh",
-                price: "5.000 VNĐ",
-                image: "https://cdn.tgdd.vn/2021/05/CookProduct/1200-1200x676-20.jpg",
-                description: "Bánh ú truyền thống gói bằng lá tre, với nhân đậu xanh thơm ngon. Bánh có hình tam giác độc đáo, hương vị đậm đà.",
-                ingredients: "Gạo nếp, đậu xanh, đường, lá tre, dây lạt, muối",
-                preparation: "Đậu xanh ngâm, hấp chín, trộn đường và vo viên. Gạo nếp ngâm. Gói bánh bằng lá tre theo hình tam giác truyền thống, luộc chín trong 3-4 giờ.",
-                meaning: "Hình tam giác của bánh ú tượng trưng cho sự vững chãi, ổn định và phát triển. Đây là món ăn truyền thống trong dịp Tết Đoan Ngọ.",
-                rating: 5,
-                badge: "Truyền thống"
-            },
-            {
-                id: 7,
-                name: "Bánh Dừa",
-                category: "banh",
-                price: "5.000 VNĐ",
-                image: "https://cdn2.fptshop.com.vn/unsafe/Banh_la_dua_7_99e02b376f.jpg",
-                description: "Bánh dừa nướng thơm lừng với vị béo ngậy của dừa và trứng, vỏ bánh vàng giòn, ruột bánh mềm xốp.",
-                ingredients: "Dừa nạo, trứng gà, đường, bột mì, bột nở, vani, sữa đặc",
-                preparation: "Trộn đều tất cả nguyên liệu, đánh bông lên, cho vào khuôn và nướng ở 180°C trong 25-30 phút đến khi bánh vàng đều và có mùi thơm.",
-                meaning: "Vị ngọt của bánh tượng trưng cho cuộc sống ngọt ngào, hạnh phúc trong năm mới. Dừa tượng trưng cho sự đầy đủ, no ấm.",
-                rating: 5,
-                badge: "Thơm ngon"
-            },
-            {
-                id: 8,
-                name: "Trà  chanh",
-                category: "tra",
-                price: "Combo",
-                image: "https://dayphache.edu.vn/wp-content/uploads/2020/03/tra-chanh.jpg",
-                description: "Trà chanh mát lạnh, chua ngọt thanh tao - thức uống giải khát quen thuộc của mọi người Việt. Từng ngụm trà thơm hòa quyện cùng vị chanh tươi giúp xua tan mệt mỏi, mang lại sự sảng khoái tức thì.",
-                ingredients: "Trà đen hoặc trà xanh, chanh tươi, đường, đá viên. Có thể thêm lá bạc hà hoặc quất để tăng hương vị.",
-                preparation: "Ủ trà với nước nóng, để nguội. Vắt chanh tươi, pha cùng đường và trà theo tỷ lệ vừa miệng. Thêm đá viên và trang trí với lát chanh.",
-                meaning: "Biểu tượng của văn hóa giao tiếp và tụ tập bạn bè. Thức uống bình dân nhưng chứa đựng sự giản dị, gần gũi và niềm vui chia sẻ trong cuộc sống.",
-                rating: 5,
-                badge: "Combo"
             }
         ];
         
